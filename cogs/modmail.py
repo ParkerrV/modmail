@@ -800,7 +800,7 @@ class Modmail(commands.Cog):
         session = EmbedPaginatorSession(ctx, *embeds)
         await session.run()
 
-    @commands.command()
+    @commands.command(aliases=["r"])
     @checks.has_permissions(PermissionLevel.SUPPORTER)
     @checks.thread_only()
     async def reply(self, ctx, *, msg: str = ""):
